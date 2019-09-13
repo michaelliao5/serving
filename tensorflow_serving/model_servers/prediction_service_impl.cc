@@ -49,6 +49,8 @@ int DeadlineToTimeoutMillis(const gpr_timespec deadline) {
 
   if (!status.ok()) {
     VLOG(1) << "Predict failed: " << status.error_message();
+  } else {
+    INFO(1) << "Predict Succeeded: Request"
   }
   return status;
 }
